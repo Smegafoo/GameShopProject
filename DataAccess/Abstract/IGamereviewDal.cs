@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
 {
     public interface IGamereviewDal : IEntityRepository<GameReview>
     {
+        public Task<List<GameReview>> GetAllByGameId(int id);
     }
 }

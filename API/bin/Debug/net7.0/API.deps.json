@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "API/1.0.0": {
         "dependencies": {
+          "Business": "1.0.0",
           "DataAccess": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.20",
           "Microsoft.EntityFrameworkCore": "7.0.20",
@@ -21,6 +22,29 @@
         },
         "runtime": {
           "API.dll": {}
+        }
+      },
+      "Autofac/7.0.1": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "6.0.1"
+        },
+        "runtime": {
+          "lib/net7.0/Autofac.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/7.0.1": {
+        "dependencies": {
+          "Autofac": "7.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
         }
       },
       "Azure.Core/1.35.0": {
@@ -646,7 +670,26 @@
           }
         }
       },
+      "Business/1.0.0": {
+        "dependencies": {
+          "Autofac": "7.0.1",
+          "Autofac.Extensions.DependencyInjection": "7.0.1",
+          "Core": "1.0.0",
+          "DataAccess": "1.0.0",
+          "Entities": "1.0.0"
+        },
+        "runtime": {
+          "Business.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.20",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+        },
         "runtime": {
           "Core.dll": {
             "assemblyVersion": "1.0.0",
@@ -685,6 +728,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J9Iz0Q+YU3uf82i8Lee0NpQOlRYfwHxwVV26jdG3zH3LFE5Y9Rx97Mju7Nswwzh/C7kVJALkTL860Y7e+mcLaw==",
+      "path": "autofac/7.0.1",
+      "hashPath": "autofac.7.0.1.nupkg.sha512"
+    },
+    "Autofac.Extensions.DependencyInjection/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uyo6+qYJaoI9sbdC6+SG2WBVmlfM4Myj4591uyrbribvFOhNgIiYvE0ahaW5LMBPZXcYFuFv9fgi9om2qB2jKw==",
+      "path": "autofac.extensions.dependencyinjection/7.0.1",
+      "hashPath": "autofac.extensions.dependencyinjection.7.0.1.nupkg.sha512"
     },
     "Azure.Core/1.35.0": {
       "type": "package",
@@ -1175,6 +1232,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Core/1.0.0": {
       "type": "project",

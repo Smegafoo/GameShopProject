@@ -1,8 +1,3 @@
-C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
-C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
-C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\bin\Debug\net7.0\DataAccess.dll
@@ -11,6 +6,12 @@ C:\Users\emiru\source\repos\GameShopProject\DataAccess\bin\Debug\net7.0\Core.dll
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\bin\Debug\net7.0\Entities.dll
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\bin\Debug\net7.0\Entities.pdb
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\bin\Debug\net7.0\Core.pdb
+C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.sourcelink.json
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.csproj.Up2Date
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\DataAccess.dll
 C:\Users\emiru\source\repos\GameShopProject\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll

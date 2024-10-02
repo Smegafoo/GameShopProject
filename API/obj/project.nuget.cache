@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TeyRlm2/UW4=",
+  "dgSpecHash": "0bdHiFEt/eQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\emiru\\source\\repos\\GameShopProject\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\emiru\\.nuget\\packages\\autofac\\7.0.1\\autofac.7.0.1.nupkg.sha512",
+    "C:\\Users\\emiru\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.0.1\\autofac.extensions.dependencyinjection.7.0.1.nupkg.sha512",
     "C:\\Users\\emiru\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\emiru\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\emiru\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

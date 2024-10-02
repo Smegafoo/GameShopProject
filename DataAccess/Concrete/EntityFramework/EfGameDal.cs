@@ -11,5 +11,9 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfGameDal : EfEntityRepositoryBase<Game,MySqlContext>, IGameDal
     {
+        public EfGameDal()
+        {
+            
+        }
     }
 }

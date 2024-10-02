@@ -16,36 +16,52 @@ namespace Core.DataAccess.EfEntityRepository
     {
 
         //CUD Operations
-        public void add(TEntity entity)
+        public async Task Add(TEntity entity)
         {
-            using (TContext context=new TContext())
+            try
             {
-                var addeEntity=context.Entry(entity);
-                addeEntity.State = EntityState.Added;
-                context.SaveChanges();
+                using (TContext context = new TContext())
+                {
+                    var addeEntity = context.Entry(entity);
+                    addeEntity.State = EntityState.Added;
+                    await context.SaveChangesAsync();
 
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
             }
             
         }
 
-        public void delete(TEntity entity)
+        public async Task Delete(TEntity entity)
         {
-            using (TContext context = new TContext())
+            try
             {
-                var deletedEntity=context.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
-                context.SaveChanges();
+                using (TContext context = new TContext())
+                {
+                    var deletedEntity = context.Entry(entity);
+                    deletedEntity.State = EntityState.Deleted;
+                    await context.SaveChangesAsync();
 
+                }
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
             }
         }
 
-        public void update(TEntity entity)
+        public async Task Update(TEntity entity)
         {
             using (TContext context = new TContext())
             {
                 var updatedEntity=context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;
-                context.SaveChanges();
+                await context.SaveChangesAsync();
 
             }
         }
@@ -53,20 +69,22 @@ namespace Core.DataAccess.EfEntityRepository
 
         //Read Operations
 
-        public TEntity Get(Expression<Func<TEntity, bool>> filter = null)
+        public async Task<TEntity> Get(Expression<Func<TEntity, bool>> filter = null)
         {
             using (TContext context=new TContext())
             {
-                return context.Set<TEntity>().SingleOrDefault(filter);
+                return  await context.Set<TEntity>().SingleOrDefaultAsync(filter);
 
             }
         }
 
-        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
+        public async Task<List<TEntity>> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
             using (TContext context=new TContext())
             {
-                return filter==null ?context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList();
+                return filter==null 
+                    ? await context.Set<TEntity>().ToListAsync() 
+                    : await context.Set<TEntity>().Where(filter).ToListAsync();
 
             }
         }

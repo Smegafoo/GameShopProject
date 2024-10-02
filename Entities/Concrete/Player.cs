@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess.Entities;
+using Entities.Relation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,7 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string PlayerName { get; set; }
         public string PlayerDescription { get; set; }
-
-
         public int GameLibraryId { get; set; }
-        public GameLibrary Games { get; set; }
 
     }
 }

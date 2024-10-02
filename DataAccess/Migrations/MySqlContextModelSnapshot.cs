@@ -19,6 +19,25 @@ namespace DataAccess.Migrations
                 .HasAnnotation("ProductVersion", "7.0.20")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Entities.Concrete.Admin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("AdminLevel")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("AdminName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("Entities.Concrete.Game", b =>
                 {
                     b.Property<int>("Id")
@@ -101,9 +120,6 @@ namespace DataAccess.Migrations
                     b.Property<int>("GameLibraryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("GamesId")
-                        .HasColumnType("int");
-
                     b.Property<string>("PlayerDescription")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -113,8 +129,6 @@ namespace DataAccess.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("GamesId");
 
                     b.ToTable("Players");
                 });
@@ -139,17 +153,6 @@ namespace DataAccess.Migrations
                     b.HasOne("Entities.Concrete.GameLibrary", null)
                         .WithMany("Games")
                         .HasForeignKey("GameLibraryId");
-                });
-
-            modelBuilder.Entity("Entities.Concrete.Player", b =>
-                {
-                    b.HasOne("Entities.Concrete.GameLibrary", "Games")
-                        .WithMany()
-                        .HasForeignKey("GamesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Games");
                 });
 
             modelBuilder.Entity("Entities.Relation.LibraryGames", b =>

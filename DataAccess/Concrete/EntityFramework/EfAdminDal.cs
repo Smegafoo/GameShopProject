@@ -11,5 +11,6 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfAdminDal : EfEntityRepositoryBase<Admin,MySqlContext>, IAdminDal
     {
+
     }
 }

@@ -231,6 +231,10 @@
         }
       },
       "Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.20",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+        },
         "runtime": {
           "Core.dll": {
             "assemblyVersion": "1.0.0",
