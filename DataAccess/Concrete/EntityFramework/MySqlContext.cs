@@ -35,8 +35,9 @@ namespace DataAccess.Concrete.EntityFramework
                 v => (Authority)Enum.Parse(typeof(Authority), v)
                 );
 
-            
         }
+
+       
 
         public DbSet<Game> Games { get; set; }
         public DbSet<GameReview> GameReviews { get; set; }
@@ -44,6 +45,8 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<LibraryGames> LibraryGames { get; set; }
 
         public DbSet<Admin> Admins { get; set; }
+
+        public DbSet<GameLibrary> gameLibraries { get; set; }
 
 
 

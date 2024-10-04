@@ -1,4 +1,6 @@
-﻿using Entities.Concrete;
+﻿using Core.DataAccess.CrossTables;
+using Core.DataAccess.Entities;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Relation
 {
-    public class LibraryGames
+    public class LibraryGames : ICrossTable
     {
         public int GameLibraryId { get; set; }
         public int GameId { get; set; }

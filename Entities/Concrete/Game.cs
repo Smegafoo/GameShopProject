@@ -14,8 +14,8 @@ namespace Entities.Concrete
         public int GamePrice { get; set; }
         public string GameDescription { get; set; }
         public  string GameGenre { get; set; }
-        
-        List<GameLibrary> Libraries { get; set; }
+
+        public List<GameLibrary> Libraries { get; set; }
     
     }
 }

@@ -20,6 +20,12 @@ namespace Entities.Constants
             public static string EXCEPTION_REVIEWNOTFOUND = "There are no review that belongs to this ID!!";
             public static string EXCEPTION_LIBRARYNOTFOUND = "There are no library that belongs to this ID!!";
             public static string EXCEPTION_ADMINNOTFOUND = "There are no admin that belongs to this ID!!";
+            public static string EXCEPTION_LIBRARYGAMENOTFOUND = "There are no library or game that belongs to this ID!!";
+            
+
+
+
+
 
 
 
@@ -32,6 +38,7 @@ namespace Entities.Constants
             public static string EXCEPTION_REVIEWDELETED = "The review has deleted succesfully";
             public static string EXCEPTION_LIBRARYDELETED = "The library has deleted succesfully";
             public static string EXCEPTION_ADMINDELETED = "The admin has deleted succesfully";
+            public static string EXCEPTION_LIBRARYGAMEDELETED = "The game has deleted from the library succesfully ";
 
         }
         public static class UpdateMessages
@@ -67,6 +74,7 @@ namespace Entities.Constants
             public static string EXCEPTION_ADDEDGAMEREVIEW = " The review has added succesfully";
             public static string EXCEPTION_ADDEDGAMELIBRARY = " The game library has added succesfully";
             public static string EXCEPTION_ADDEDADMIN = " The admin has added succesfully";
+            public static string EXCEPTION_ADDEDLIBRARYGAME = " The game has added to the library succesfully";
         }
     }
 }

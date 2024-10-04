@@ -11,5 +11,9 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfPlayerDal : EfEntityRepositoryBase<Player,MySqlContext>, IPlayerDal
     {
+        public EfPlayerDal()
+        {
+            
+        }
     }
 }

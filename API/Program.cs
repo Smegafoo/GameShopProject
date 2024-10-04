@@ -31,6 +31,8 @@ builder.Services.AddScoped(typeof(IGameLibraryDal), typeof(EfGameLibraryDal));
 builder.Services.AddScoped(typeof(IGameLibraryService), typeof(GameLibraryManager));
 builder.Services.AddScoped(typeof(IAdminDal), typeof(EfAdminDal));
 builder.Services.AddScoped(typeof(IAdminService), typeof(AdminManager));
+builder.Services.AddScoped(typeof(ILibraryGameDal), typeof(EfLibraryGameDal));
+builder.Services.AddScoped(typeof(ILibraryGameService), typeof(LibraryGameManager));
 
 
 var app = builder.Build();

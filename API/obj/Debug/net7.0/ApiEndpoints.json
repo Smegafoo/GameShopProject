@@ -302,6 +302,75 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.LibraryGameController",
+    "Method": "Add",
+    "RelativePath": "api/LibraryGame/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Entities.DTO_s.Requests.LibraryGame.AddLibraryGameModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LibraryGameController",
+    "Method": "DeleteGameFromLibrary",
+    "RelativePath": "api/LibraryGame/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id1",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "id2",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LibraryGameController",
+    "Method": "GetAllGamesByLibraryId",
+    "RelativePath": "api/LibraryGame/GetAllGamesByLibraryId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LibraryGameController",
+    "Method": "GetAllGamesFromLibrary",
+    "RelativePath": "api/LibraryGame/GetAllGamesFromLibrary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.PlayerController",
     "Method": "PlayerAdd",
     "RelativePath": "api/Player/Add",
