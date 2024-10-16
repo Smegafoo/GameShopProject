@@ -18,3 +18,5 @@ C:\Users\emiru\source\repos\GameShopProject\Business\obj\Debug\net7.0\Business.d
 C:\Users\emiru\source\repos\GameShopProject\Business\obj\Debug\net7.0\refint\Business.dll
 C:\Users\emiru\source\repos\GameShopProject\Business\obj\Debug\net7.0\Business.pdb
 C:\Users\emiru\source\repos\GameShopProject\Business\obj\Debug\net7.0\ref\Business.dll
+C:\Users\emiru\source\repos\GameShopProject\Business\bin\Debug\net7.0\Business.runtimeconfig.json
+C:\Users\emiru\source\repos\GameShopProject\Business\obj\Debug\net7.0\Business.genruntimeconfig.cache

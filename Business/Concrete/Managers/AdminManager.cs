@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilies.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -30,6 +32,8 @@ namespace Business.Concrete.Managers
                     AdminName = model.AdminName,
                     AdminLevel = model.AdminLevel,
                 };
+
+                ValidationTool.Validate(new AdminValidator(), admin);
                 await _adminDal.Add(admin);
                 return new ErrorResult(Messages.AddMessages.EXCEPTION_ADDEDADMIN);
             }
@@ -72,6 +76,8 @@ namespace Business.Concrete.Managers
                 {
                     admin.AdminName = model.AdminName;
                     admin.AdminLevel = model.AdminLevel;
+
+                    ValidationTool.Validate(new AdminValidator(), admin);
                     await _adminDal.Update(admin);
                     return new SuccesResult(Messages.UpdateMessages.EXCEPTION_ADMINUPDATED);
                 }

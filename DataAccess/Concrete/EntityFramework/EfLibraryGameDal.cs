@@ -29,7 +29,7 @@ namespace DataAccess.Concrete.EntityFramework
                              where p.GameLibraryId == id
                              select new LibraryDto
                              {
-                                 game = j,
+                                 GameName =j.GameName
                                  
                              };
                 return  await result.ToListAsync();

@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilies.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -36,6 +38,8 @@ namespace Business.Concrete.Managers
                     GameGenre = model.GameGenre,
                     GamePrice = model.GamePrice,
                 };
+
+                ValidationTool.Validate(new GameValidator(), game);
 
                 await _gameDal.Add(game);
 
@@ -83,6 +87,8 @@ namespace Business.Concrete.Managers
                     gametoUpdate.GamePrice = model.GamePrice;
                     gametoUpdate.GameDescription = model.GameDescription;
                     gametoUpdate.GameGenre = model.GameGenre;
+
+                    ValidationTool.Validate(new GameValidator(), gametoUpdate);
                     _gameDal.Update(gametoUpdate);
                     return new SuccesResult(Messages.UpdateMessages.EXCEPTION_GAMEUPDATED);
                 }

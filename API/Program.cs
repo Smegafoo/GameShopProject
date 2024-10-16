@@ -9,6 +9,8 @@ using Autofac.Core;
 using Business.Abstract;
 using Business.Concrete.Managers;
 using DataAccess.Abstract;
+using Microsoft.AspNetCore.Hosting;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +35,12 @@ builder.Services.AddScoped(typeof(IAdminDal), typeof(EfAdminDal));
 builder.Services.AddScoped(typeof(IAdminService), typeof(AdminManager));
 builder.Services.AddScoped(typeof(ILibraryGameDal), typeof(EfLibraryGameDal));
 builder.Services.AddScoped(typeof(ILibraryGameService), typeof(LibraryGameManager));
+
+
+
+
+
+
 
 
 var app = builder.Build();

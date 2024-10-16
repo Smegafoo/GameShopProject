@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilies.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -33,6 +35,8 @@ namespace Business.Concrete.Managers
                     PlayerName = model.PlayerName,
                     GameNumber = model.GameNumber,
                 };
+
+                ValidationTool.Validate(new GameLibraryValidator(), gameLibrary);
 
                 await _gameLibraryDal.Add(gameLibrary);
                 return new SuccesResult(Messages.AddMessages.EXCEPTION_ADDEDGAMELIBRARY);
@@ -80,6 +84,7 @@ namespace Business.Concrete.Managers
                     gameLibrary.PlayerName = model.PlayerName;  
                     gameLibrary.GameNumber = model.GameNumber;
 
+                    ValidationTool.Validate(new GameLibraryValidator(), gameLibrary);
                     await _gameLibraryDal.Update(gameLibrary);
                     return new SuccesResult(Messages.UpdateMessages.EXCEPTION_LIBRARYUPDATED);
                 }

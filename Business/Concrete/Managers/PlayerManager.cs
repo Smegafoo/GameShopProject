@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilies.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -7,6 +9,7 @@ using Entities.DTO_s.Requests.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +39,8 @@ namespace Business.Concrete.Managers
                     GameLibraryId = model.GameLıbraryId,
 
                 };
+
+                ValidationTool.Validate(new PlayerValidator(), player);
                 await _playerDal.Add(player);
                 return new SuccesResult(Messages.AddMessages.EXCEPTION_ADDEDPLAYER);
 
@@ -81,6 +86,8 @@ namespace Business.Concrete.Managers
                     playertoUpdate.PlayerName = model.PlayerName;
                     playertoUpdate.PlayerDescription = model.PlayerDescription;
                     playertoUpdate.GameLibraryId = model.GameLıbraryId;
+
+                    ValidationTool.Validate(new PlayerValidator(), playertoUpdate);
                     await _playerDal.Update(playertoUpdate);
                     return new SuccesResult(Messages.UpdateMessages.EXCEPTION_PLAYERUPDATED);
 

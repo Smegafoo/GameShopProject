@@ -1,4 +1,7 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilies.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
@@ -7,6 +10,7 @@ using Entities.Constants;
 using Entities.DTO_s.Requests.GameReview;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +27,15 @@ namespace Business.Concrete.Managers
         }
 
         //CUD Operations
+
+
+
+        
         public async Task<IResult> AddGameReview(AddGameReviewModel model)
         {
+
+
+
             try
             {
                 GameReview gameReview = new GameReview()
@@ -34,14 +45,20 @@ namespace Business.Concrete.Managers
                     ReviewPoint = model.ReviewPoint,
                 };
 
+                ValidationTool.Validate(new GameReviewValidator(),gameReview);
+
                 await _gamereviewDal.Add(gameReview);
                 return new SuccesResult(Messages.AddMessages.EXCEPTION_ADDEDGAMEREVIEW);
+
             }
             catch (Exception e)
             {
 
                 throw e;
             }
+                
+            
+
         }
 
         public async Task<IResult> DeleteGameReview(int id)
@@ -79,6 +96,9 @@ namespace Business.Concrete.Managers
                     reviewtoUpdate.Review = model.Review;
                     reviewtoUpdate.ReviewPoint = model.ReviewPoint;
                     _gamereviewDal.Update(reviewtoUpdate);
+
+
+                    ValidationTool.Validate(new GameReviewValidator(), reviewtoUpdate);
 
 
                     return new SuccesResult(Messages.UpdateMessages.EXCEPTION_REVIEWUPDATED);

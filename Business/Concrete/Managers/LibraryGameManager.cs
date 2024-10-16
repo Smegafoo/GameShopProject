@@ -1,6 +1,9 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilies.Results;
 using DataAccess.Abstract;
+using Entities.Concrete;
 using Entities.Constants;
 using Entities.DTO_s.Dto_s;
 using Entities.DTO_s.Requests.LibraryGame;
@@ -31,6 +34,8 @@ namespace Business.Concrete.Managers
                     GameLibraryId = model.GameLibraryId,
                     GameId = model.GameId,
                 };
+
+                
                 await _libraryGameDal.Add(libraryGames);
 
                 return new SuccesResult(Messages.AddMessages.EXCEPTION_ADDEDLIBRARYGAME);

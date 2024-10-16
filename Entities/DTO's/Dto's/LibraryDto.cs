@@ -11,7 +11,7 @@ namespace Entities.DTO_s.Dto_s
     public class LibraryDto  :IDto
     {
     
-        public Game game {  get; set; }
+        public string GameName {  get; set; }
         
 
         public LibraryDto()
